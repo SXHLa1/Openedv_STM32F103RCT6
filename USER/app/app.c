@@ -23,10 +23,6 @@ void App_Run()
 {
 
     led_set();
-    led_set();
-    led_set();
-    led_set();
-
 
 
 }
