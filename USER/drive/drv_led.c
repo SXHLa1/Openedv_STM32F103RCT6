@@ -29,9 +29,9 @@ void led_set()
 {
         GPIO_ResetBits(LED0_PORT,LED0_PIN);
         GPIO_SetBits(LED1_PORT,LED1_PIN);
-        delay_ms(300);
+        delay_ms(3000);
         GPIO_SetBits(LED0_PORT,LED0_PIN);
         GPIO_ResetBits(LED1_PORT,LED1_PIN);
-        delay_ms(300);
+        delay_ms(3000);
 }
 
