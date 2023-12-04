@@ -1068,6 +1068,10 @@
                     <name>ICCARM</name>
                     <file> 177 60 92 38 67 58 50 85 61 74 80 174 73 48 98 65 168 69 45 63 56 132 184 131 128 157 169 155 160 166 41 175 159 164 154 171 182 178</file>
                 </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 60 45 164 48 74 157 58 61 174 132 166 178 92 38 50 85 65 177 131 155 175 171 98 80 67 73 69 63 56 184 128 169 160 41 159 154 182</file>
+                </tool>
             </inputs>
         </file>
         <file>
@@ -1089,10 +1093,6 @@
                 </tool>
             </inputs>
         </file>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Debug\Exe\Openedv_STM32F103RCT6.out</name>
-            <tool>OBJCOPY</tool>
-        </forcedrebuild>
     </configuration>
     <configuration>
         <name>Release</name>
