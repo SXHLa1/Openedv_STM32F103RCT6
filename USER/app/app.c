@@ -1,5 +1,5 @@
 #include "app.h"
-
+#include "drv_delay.h"
 
 
 
@@ -8,6 +8,7 @@ void App_Init()
 {
     
     led_init();
+    delay_init();
 
 
 
@@ -21,8 +22,9 @@ void App_Init()
 
 void App_Run()
 {
-
-    led_set();
-
+    while(1)
+    {
+        led_set();
+    }
 
 }
