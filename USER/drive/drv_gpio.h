@@ -19,11 +19,11 @@
 //LED引脚
 #define LED0_PORT                       GPIOA
 #define LED0_PIN                        GPIO_Pin_8
-#define LED0                            GPIOA,GPIO_Pin_8
+#define LED0                            GPIOA,GPIO_Pin_8            //红色
 
 #define LED1_PORT                       GPIOD
 #define LED1_PIN                        GPIO_Pin_2
-#define LED1                            GPIOD,GPIO_Pin_2
+#define LED1                            GPIOD,GPIO_Pin_2            //绿色
 //按键引脚
 #define KEY_UP_PORT                     GPIOA
 #define KEY_UP_PIN                      GPIO_Pin_0

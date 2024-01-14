@@ -61,7 +61,7 @@ void IIC_Stop(void)
 }
 
 
-uint8   IIC_Wait_Ack(void)
+uint8 IIC_Wait_Ack(void)
 {
     uint8   ucErrTime = 0;
     SDA_IN();

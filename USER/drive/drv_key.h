@@ -4,6 +4,16 @@
 
 /************** include ****************/
 #include"drv_gpio.h"
+#include"drv_delay.h"
+
+
+
+
+/*************** define ****************/
+#define KEY0_Pres               0               //按键KEY0按下标志
+#define KEY1_Pres               1               //按键KEY1按下标志
+#define KEY_UP_Pres             2               //按键KEY_UP按下标志
+
 
 
 
@@ -24,6 +34,8 @@ typedef struct
 }key_scan_t;
 
 
+void key_init(void);                    //按键初始化
+uint8 Key_Scan(uint8 mode);             //按键检测
 
 
 
