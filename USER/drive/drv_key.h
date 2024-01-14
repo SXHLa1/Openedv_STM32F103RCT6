@@ -10,9 +10,15 @@
 
 
 /*************** define ****************/
-#define KEY0_Pres               0               //按键KEY0按下标志
-#define KEY1_Pres               1               //按键KEY1按下标志
-#define KEY_UP_Pres             2               //按键KEY_UP按下标志
+
+
+#define KEY0_Status    GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_5)//读取按键0
+#define KEY1_Status    GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_15)//读取按键1
+#define WK_UP_Status   GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_0)//读取按键2 
+
+#define KEY0_Pres               1               //按键KEY0按下标志
+#define KEY1_Pres               2               //按键KEY1按下标志
+#define KEY_UP_Pres             3               //按键KEY_UP按下标志
 
 
 
@@ -35,7 +41,7 @@ typedef struct
 
 
 void key_init(void);                    //按键初始化
-uint8 Key_Scan(uint8 mode);             //按键检测
+uint8_t Key_Scan(uint8_t mode);             //按键检测
 
 
 

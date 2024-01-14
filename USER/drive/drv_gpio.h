@@ -144,11 +144,11 @@
 //IIC
 #define IIC_SCL_PORT                    GPIOC
 #define IIC_SCL_PIN                     GPIO_Pin_12
-#define IIC_SCL                         GPIOC,GPIO_Pin_12
+#define IIC_SCL_IO                         GPIOC,GPIO_Pin_12
 
 #define IIC_SDA_PORT                    GPIOC
 #define IIC_SDA_PIN                     GPIO_Pin_11
-#define IIC_SDA                         GPIOC,GPIO_Pin_11
+#define IIC_SDA_IO                         GPIOC,GPIO_Pin_11
 
 //SPI
 #if Module_Type == SPI_FLASH
