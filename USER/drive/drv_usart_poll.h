@@ -7,7 +7,7 @@
 #define RxPort  GPIOA
 #define RxPin   GPIO_Pin_10
 #define BaudRate 9600
-#define EN_USART1_RX 			0		//使能�?�?禁止�?）串�?接收
+#define EN_USART1_pool_RX 			0		//使能�?�?禁止�?）串�?接收
 #define Tx_Buffer  6
 
 

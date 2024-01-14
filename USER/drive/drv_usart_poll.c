@@ -28,7 +28,7 @@ void Usart_Poll_Init()
     USART_InitStruct.USART_WordLength = USART_WordLength_8b;
     USART_Init(USART1, &USART_InitStruct);
 
- #if EN_USART1_RX //如果使能了接�?
+ #if EN_USART1_pool_RX //如果使能了接�?
 //⑤初始化 NVIC
     NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=3 ; //抢占优先�?3

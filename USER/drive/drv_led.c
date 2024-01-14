@@ -47,15 +47,15 @@ void led_test(void)
 void FailLED(void)
 {
     GPIO_ResetBits(LED0);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_SetBits(LED0);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_ResetBits(LED0);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_SetBits(LED0);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_ResetBits(LED0);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_SetBits(LED0);
 }
 
@@ -63,17 +63,15 @@ void FailLED(void)
 void SuccessLED(void)
 {
     GPIO_ResetBits(LED1);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_SetBits(LED1);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_ResetBits(LED1);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_SetBits(LED1);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_ResetBits(LED1);
-    delay_ms(1000);
+    delay_ms(300);
     GPIO_SetBits(LED1);
-
-
 }
 
