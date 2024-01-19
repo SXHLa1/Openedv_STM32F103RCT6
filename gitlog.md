@@ -21,3 +21,6 @@
  * 1.IIC驱动优化 2.EEprom 读写调试 (dehongyi)
  * 1.IIC驱动优化 2.EEprom 读写调试 (dehongyi)
  * 1.添加LCD驱动 2.LCD显示功能OK (dehongyi)
+
+## 2024-01-19
+ * Update CHANGELOG.md to v1.1.1 (dehongyi)
