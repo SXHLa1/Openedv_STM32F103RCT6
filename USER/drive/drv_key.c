@@ -35,7 +35,7 @@ uint8_t Key_Scan(uint8_t mode)
     {
         key_up = 1;
     }
-    if(key_up && (KEY0_Status == 0 || GPIO_ReadInputDataBit(KEY1) == 0 || GPIO_ReadInputDataBit(KEY_UP) == 1))
+    if(key_up && (KEY0_Status == 0 || KEY1_Status == 0 || WK_UP_Status == 1))
     {
         delay_ms(10);
         if(KEY0_Status == 0)
@@ -51,7 +51,7 @@ uint8_t Key_Scan(uint8_t mode)
             return KEY_UP_Pres;
         }
     }
-    else if(KEY0_Status == 1 && GPIO_ReadInputDataBit(KEY1) == 1 && GPIO_ReadInputDataBit(KEY_UP) == 0)
+    else if(KEY0_Status == 1 && KEY1_Status == 1 && WK_UP_Status == 0)
     {
         key_up = 0;
     }

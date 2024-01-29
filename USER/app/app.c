@@ -5,6 +5,7 @@
 #include "drv_eeprom.h"
 #include "drv_key.h"
 #include "drv_lcd.h"
+#include "drv_iwdg.h"
 
 
 const uint8_t TEXT_Buffer[]={"MiniSTM32 IIC TEST"};
@@ -14,10 +15,11 @@ void App_Init()
 {
     
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    IWDG_Init();
     led_init();
     delay_init();
     key_init();
-    uart_init(9600);
+    (9600);
     AT24CXX_Init();
     LCD_Init();
     
@@ -28,7 +30,7 @@ void App_Run()
     led_test();
     uint8_t key,i = 0;
     uint8_t datatemp[SIZE] = {0};
-    POINT_COLOR=RED;//设置字体为红色 
+    POINT_COLOR = RED;//设置字体为红色 
 	LCD_ShowString(60,50,200,16,16,"Mini STM32");	
 	LCD_ShowString(60,70,200,16,16,"IIC TEST");	
 	LCD_ShowString(60,90,200,16,16,"ATOM@ALIENTEK");
@@ -43,7 +45,7 @@ void App_Run()
         FailLED();
 	}
     LCD_ShowString(60,150,200,16,16,"24C02 Ready!");    
- 	POINT_COLOR=BLUE;//设置字体为蓝色
+ 	POINT_COLOR = BLUE;//设置字体为蓝色
     while(1)
     {
         key = Key_Scan(1);
@@ -63,7 +65,7 @@ void App_Run()
             //AT24CXX_Read(0,datatemp,SIZE);
             EEprom_Read(0,datatemp,SIZE);
             LCD_ShowString(60,170,200,16,16,"The Data Readed Is:  ");//提示传送完成
-			LCD_ShowString(60,190,200,16,16,datatemp);
+            LCD_ShowString(60,190,200,16,16,datatemp);
             for(i = 0; i < SIZE; i++)
             {
                 if(datatemp[i] == TEXT_Buffer[i])
@@ -88,6 +90,8 @@ void App_Run()
             SuccessLED();//提示系统正在运行	
             i=0;
         }
+        
+        IWDG_Clr();
     }
 
 }

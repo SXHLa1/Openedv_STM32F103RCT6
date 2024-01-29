@@ -2,18 +2,14 @@
 #define __DRV_USART_POLL_H
 #include "sys.h"
 
-#define TxPort  GPIOA
-#define TxPin   GPIO_Pin_9
-#define RxPort  GPIOA
-#define RxPin   GPIO_Pin_10
-#define BaudRate 9600
-#define EN_USART1_pool_RX 			0		//使能�?�?禁止�?）串�?接收
-#define Tx_Buffer  6
+
+#define EN_USART1_pool_RX               1       //使能接收中断使能
+#define Tx_Buffer                       6       
 
 
 void Usart_Poll_Init(void);
-void Usart_SendChar(USART_TypeDef* USARTx,  char data);
-char Usart_GetChar(USART_TypeDef* USARTx);
+void Usart_Senddata(USART_TypeDef* USARTx,  uint8_t data);
+uint8_t Usart_Getdata(USART_TypeDef* USARTx);
 
 
 

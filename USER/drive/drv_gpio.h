@@ -212,13 +212,13 @@
 #endif
 
 //串口引脚
-#define UART1_TXD_PORT                  GPIOA
-#define UART1_TXD_PIN                   GPIO_Pin_9
-#define UART1_TXD                       GPIOA,GPIO_Pin_9
+#define USART1_TXD_PORT                  GPIOA
+#define USART1_TXD_PIN                   GPIO_Pin_9
+#define USART1_TXD                       GPIOA,GPIO_Pin_9
 
-#define UART1_RXD_PORT                  GPIOA
-#define UART1_RXD_PIN                   GPIO_Pin_10
-#define UART1_RXD                       GPIOA,GPIO_Pin_10
+#define USART1_RXD_PORT                  GPIOA
+#define USART1_RXD_PIN                   GPIO_Pin_10
+#define USART1_RXD                       GPIOA,GPIO_Pin_10
 
 //USB引脚
 #define USB_UP_PORT                     GPIOA

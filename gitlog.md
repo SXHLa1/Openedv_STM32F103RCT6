@@ -24,3 +24,4 @@
 
 ## 2024-01-19
  * Update CHANGELOG.md to v1.1.1 (dehongyi)
+ * 添加git log (dehongyi)
