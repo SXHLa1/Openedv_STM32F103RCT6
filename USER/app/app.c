@@ -19,7 +19,7 @@ void App_Init()
     led_init();
     delay_init();
     key_init();
-    (9600);
+    Usart1_Init(9600);
     AT24CXX_Init();
     LCD_Init();
     
@@ -31,21 +31,21 @@ void App_Run()
     uint8_t key,i = 0;
     uint8_t datatemp[SIZE] = {0};
     POINT_COLOR = RED;//设置字体为红色 
-	LCD_ShowString(60,50,200,16,16,"Mini STM32");	
-	LCD_ShowString(60,70,200,16,16,"IIC TEST");	
-	LCD_ShowString(60,90,200,16,16,"ATOM@ALIENTEK");
-	LCD_ShowString(60,110,200,16,16,"2014/3/9");	
-	LCD_ShowString(60,130,200,16,16,"WK_UP:Write  KEY0:Read");
+    LCD_ShowString(60,50,200,16,16,"Mini STM32");   
+    LCD_ShowString(60,70,200,16,16,"IIC TEST"); 
+    LCD_ShowString(60,90,200,16,16,"ATOM@ALIENTEK");
+    LCD_ShowString(60,110,200,16,16,"2014/3/9");    
+    LCD_ShowString(60,130,200,16,16,"WK_UP:Write  KEY0:Read");
     while(EEprom_Check())
-	{
-	    LCD_ShowString(60,150,200,16,16,"24C02 Check Failed!");
-		delay_ms(500);
-		LCD_ShowString(60,150,200,16,16,"Please Check!      ");
-		delay_ms(500);
+    {
+        LCD_ShowString(60,150,200,16,16,"24C02 Check Failed!");
+        delay_ms(500);
+        LCD_ShowString(60,150,200,16,16,"Please Check!      ");
+        delay_ms(500);
         FailLED();
-	}
+    }
     LCD_ShowString(60,150,200,16,16,"24C02 Ready!");    
- 	POINT_COLOR = BLUE;//设置字体为蓝色
+    POINT_COLOR = BLUE;//设置字体为蓝色
     while(1)
     {
         key = Key_Scan(1);
@@ -87,7 +87,7 @@ void App_Run()
         delay_ms(10);
         if(i==20)
         {
-            SuccessLED();//提示系统正在运行	
+            SuccessLED();//提示系统正在运行 
             i=0;
         }
         

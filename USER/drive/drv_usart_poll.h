@@ -7,7 +7,7 @@
 #define Tx_Buffer                       6       
 
 
-void Usart_Poll_Init(void);
+void Usart_Poll_Init(uint8_t bound);
 void Usart_Senddata(USART_TypeDef* USARTx,  uint8_t data);
 uint8_t Usart_Getdata(USART_TypeDef* USARTx);
 

@@ -1,8 +1,12 @@
+
+
+
 #include "drv_usart_poll.h"
 #include "sys.h"
+#include "drv_gpio.h"
 
 
-void Usart_Poll_Init(unit8_t bound)
+void Usart_Poll_Init(uint8_t bound)
 {
     GPIO_InitTypeDef GPIO_InitStruct;
     USART_InitTypeDef USART_InitStruct;

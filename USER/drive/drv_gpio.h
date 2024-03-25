@@ -7,7 +7,7 @@
 /*********** 外接模块类型配置 *************/
 #define SPI_FLASH   1
 #define SD_CARD     2
-#define NRF24L01   3
+#define NRF24L01    3
 
 #ifndef Module_Type
 #define Module_Type      SPI_FLASH
@@ -142,13 +142,11 @@
 #define T_CS                            GPIOC,GPIO_Pin_13
 
 //IIC
-#define IIC_SCL_PORT                    GPIOC
+#define IIC_PORT                        GPIOC
 #define IIC_SCL_PIN                     GPIO_Pin_12
-#define IIC_SCL_IO                         GPIOC,GPIO_Pin_12
-
-#define IIC_SDA_PORT                    GPIOC
+#define IIC_SCL_IO                      GPIOC,GPIO_Pin_12
 #define IIC_SDA_PIN                     GPIO_Pin_11
-#define IIC_SDA_IO                         GPIOC,GPIO_Pin_11
+#define IIC_SDA_IO                      GPIOC,GPIO_Pin_11
 
 //SPI
 #if Module_Type == SPI_FLASH
