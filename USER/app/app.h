@@ -1,14 +1,14 @@
 #ifndef __APP_H
 #define __APP_H
 
-#include"drv_led.h"
 
 
 
 
 
-void App_Init();      //³õÊ¼»¯
-void App_Run();       //³ÌĞòÔËĞĞº¯Êı
+
+void App_Init();      //appåˆå§‹åŒ–
+void App_Run();       //appè¿è¡Œ
 
 
 
