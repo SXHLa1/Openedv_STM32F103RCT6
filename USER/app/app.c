@@ -5,6 +5,7 @@
 #include "drv_eeprom.h"
 #include "drv_key.h"
 #include "drv_lcd.h"
+#include "drv_led.h"
 
 
 const uint8_t TEXT_Buffer[]={"MiniSTM32 IIC TEST"};

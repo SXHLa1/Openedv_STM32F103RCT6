@@ -471,7 +471,7 @@ void LCD_SSD_BackLightSet(uint8_t pwm)
 {
     LCD_WR_REG(0xBE);           //配置PWM输出
     LCD_WR_DATA(0x05);          //1设置PWM频率
-    LCD_WR_DATA(pwm * 2.55);    //2设置PWM占空比
+    LCD_WR_DATA(pwm * (uint8_t)2.55);    //2设置PWM占空比
     LCD_WR_DATA(0x01);          //3设置C
     LCD_WR_DATA(0xFF);          //4设置D
     LCD_WR_DATA(0x00);          //5设置E
